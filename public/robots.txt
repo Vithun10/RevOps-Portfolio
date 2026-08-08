@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vithun-tr-revops.vercel.app/sitemap.xml

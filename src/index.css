@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ─────────────────────────────────────────────── */
+@theme {
+  --color-surface-0: #06080F;
+  --color-surface-1: #0C0F18;
+  --color-surface-2: #121622;
+  --color-surface-3: #1A1F2E;
+  --color-surface-4: #222838;
+
+  --color-text-primary: #F0F2F5;
+  --color-text-secondary: #8B92A5;
+  --color-text-tertiary: #5A6175;
+  --color-text-accent: #6C8CFF;
+
+  --color-accent: #6C8CFF;
+  --color-accent-2: #A78BFA;
+  --color-accent-3: #34D399;
+
+  --color-border: #1E2337;
+  --color-border-hover: #2A3050;
+
+  --color-glass: rgba(12, 15, 24, 0.7);
+  --color-glass-border: rgba(108, 140, 255, 0.08);
+  --color-glass-hover: rgba(108, 140, 255, 0.04);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* ── Base ──────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface-0);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, button, [role="button"] {
+  outline-offset: 2px;
+}
+
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible {
+  outline: 2px solid rgba(108, 140, 255, 0.75);
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: rgba(108, 140, 255, 0.25);
+  color: #fff;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-0);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-surface-4);
+}
+
+/* ── Glass Card Utility ────────────────────────────────────────── */
+.glass-card {
+  @apply bg-surface-1/85 border border-border;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.glass-card:hover {
+  @apply border-border-hover bg-surface-2/95;
+}
+
+/* ── Button Utilities ──────────────────────────────────────────── */
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-accent/10 text-accent font-medium text-sm px-4 py-2 border border-accent/20 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface-0;
+}
+.btn-secondary:hover {
+  @apply bg-accent/15 border-accent/30 shadow-[0_0_20px_-8px_rgba(108,140,255,0.3)];
+}
+
+/* ── Badge Utilities ───────────────────────────────────────────── */
+.badge {
+  @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 text-[11px] font-medium rounded-md border;
+}
+.badge-accent {
+  @apply bg-accent/10 text-accent border-accent/15;
+}
+.badge-green {
+  @apply bg-accent-3/10 text-accent-3 border-accent-3/15;
+}
+.badge-purple {
+  @apply bg-accent-2/10 text-accent-2 border-accent-2/15;
+}
+.badge-outline {
+  @apply bg-surface-2/60 text-text-secondary border-border;
+}
+
+/* ── Grid Noise Overlay ────────────────────────────────────────── */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Section ───────────────────────────────────────────────────── */
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding: 0 4rem;
+  }
+}
+
+/* ── Gradient Glow ─────────────────────────────────────────────── */
+.glow-accent {
+  box-shadow: 0 0 60px -12px rgba(108, 140, 255, 0.15);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #6C8CFF 0%, #A78BFA 50%, #34D399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+

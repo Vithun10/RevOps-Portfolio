@@ -1,0 +1,18 @@
+{
+  "name": "Vithun TR | Revenue Operations Analyst Portfolio",
+  "short_name": "Vithun TR",
+  "description": "Revenue Operations Analyst portfolio showcasing pipeline management, retention analytics, CRM systems, SQL, and Power BI.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06080F",
+  "theme_color": "#06080F",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
