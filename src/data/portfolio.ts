@@ -88,7 +88,7 @@ export const hero = {
   status: 'Open to Opportunities',
 
   valueProposition:
-    'Revenue Operations Analyst with 2 years of business operations experience, leveraging CRM systems, revenue analytics, forecasting, and process optimization to improve pipeline visibility, customer retention, and revenue performance across B2B SaaS organizations.',
+    'Revenue Operations Analyst with 3+ years of business operations and analytical experience, specializing in revenue analytics, CRM operations, pipeline analysis, and forecasting. Hands-on experience with SQL, Power BI, Excel, and HubSpot CRM to diagnose pipeline bottlenecks, analyze customer retention and expansion, and support data-driven revenue decisions in B2B SaaS environments.',
 };
 
 /* ── Featured Projects ───────────────────────────────────────────── */
