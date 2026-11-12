@@ -46,5 +46,5 @@ Vithun TR
 Revenue Operations Analyst
 Bengaluru, India
 
-LinkedIn: https://www.linkedin.com/in/vithun-r-revops
+LinkedIn: https://www.linkedin.com/in/vithun-r
 GitHub: https://github.com/Vithun10/RevOps-Projects

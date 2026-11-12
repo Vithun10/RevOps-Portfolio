@@ -70,9 +70,9 @@ export const identity = {
   location: 'Bengaluru, India',
 
   contact: {
-    email: 'vithunkpm@gmail.com',
+    email: 'vithun2701@gmail.com',
     phone: '+91 9994638282',
-    linkedin: 'https://www.linkedin.com/in/vithun-r-revops',
+    linkedin: 'https://www.linkedin.com/in/vithun-r',
     github:
       'https://github.com/Vithun10/RevOps-Projects',
     resume:

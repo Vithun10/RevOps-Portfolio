@@ -29,7 +29,7 @@ const contactLinks = [
     label: 'LinkedIn',
     icon: Globe,
     href: identity.contact.linkedin,
-    display: 'linkedin.com/in/vithun-r-revops',
+    display: 'linkedin.com/in/vithun-r',
     color: '#0A66C2',
   },
   {
