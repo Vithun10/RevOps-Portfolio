@@ -76,7 +76,7 @@ export const identity = {
     github:
       'https://github.com/Vithun10/RevOps-Projects',
     resume:
-      '/resume/Vithun_Tr_RevOps_Resume.pdf',
+      '/resume/Vithun_Tr_Resume_RevOps.pdf',
   },
 };
 
