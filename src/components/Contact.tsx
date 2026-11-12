@@ -76,6 +76,26 @@ export default function Contact() {
     }
   };
 
+  const handleViewResume = () => {
+    const win = window as unknown as {
+      gtag?: (command: string, action: string, params?: Record<string, unknown>) => void;
+      va?: (event: string, properties?: Record<string, unknown>) => void;
+      plausible?: (event: string, options?: Record<string, unknown>) => void;
+    };
+    if (typeof win !== 'undefined') {
+      if (typeof win.gtag === 'function') {
+        win.gtag('event', 'view_resume', {
+          event_category: 'Resume',
+          event_label: 'View Resume',
+        });
+      } else if (typeof win.va === 'function') {
+        win.va('event', { name: 'view_resume' });
+      } else if (typeof win.plausible === 'function') {
+        win.plausible('View Resume');
+      }
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -197,8 +217,10 @@ export default function Contact() {
           >
             <a
               href={identity.contact.resume}
-              download
-              aria-label="Download Revenue Operations Analyst resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleViewResume}
+              aria-label="View Revenue Operations Analyst resume"
               className={resumeCtaButtonClassName}
             >
               <FileText
@@ -206,7 +228,7 @@ export default function Contact() {
                 aria-hidden="true"
               />
 
-              Download Resume
+              View Resume
             </a>
           </motion.div>
         </motion.div>
